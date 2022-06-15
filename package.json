@@ -4,8 +4,7 @@
   "description": "A javascript library that renders a simple recommendation frame",
   "scripts": {
     "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development",
-    "postinstall": "webpack --mode production"
+    "dev": "webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
