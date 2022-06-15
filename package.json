@@ -1,5 +1,5 @@
 {
-  "name": "flowbox-slider",
+  "name": "@ideaflowbox/slider",
   "version": "1.0.0",
   "description": "A javascript library that renders a simple recommendation frame",
   "scripts": {
