@@ -1,6 +1,6 @@
 {
   "name": "@ideaflowbox/slider",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A javascript library that renders a simple recommendation frame",
   "scripts": {
     "build": "webpack --mode production",
@@ -21,6 +21,9 @@
   "author": "Piotr Miloszewicz <piotr.miloszewicz@idea-commerce.com>",
   "license": "MIT",
   "homepage": "https://idea-commerce.com/ideaflowbox/",
+  "dependencies": {
+    "ejs": "^3.1.8"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/plugin-proposal-class-properties": "^7.17.12",
@@ -29,7 +32,6 @@
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.6.0",
-    "ejs": "^3.1.8",
     "file-loader": "^6.0.0",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
