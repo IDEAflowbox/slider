@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MyApp</title>
+  <title>IDEAflowbox – Sample Slider</title>
 </head>
 <body>
 <div id="root"></div>
@@ -132,7 +132,7 @@
 
                 <% if (config.enabled_elements.button) { %>
                   <div class="flowbox__product-button-container" style="text-align: <%= config.button.position %>;">
-                    <a href="#" class="flowbox__product-button"
+                    <a href="#" class="flowbox__product-button" data-type="<%= config.button.button_type %>"
                        style="width: <%= config.button.width %>; height: <%= config.button.height %>; background-color: <%= config.button.background_color %>; border-color: <%= config.button.border_color %>; border-radius: <%= config.button.border_radius %>; color: <%= config.button.text_color %>; font-size: <%= config.button.text_size %>; padding-left: <%= config.button.side_padding %>; padding-right: <%= config.button.side_padding %>;"><%= config.button.text %></a>
                   </div>
                 <% } %>

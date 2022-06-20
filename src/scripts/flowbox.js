@@ -55,6 +55,10 @@ class Flowbox {
                 matrix: {
                     ...this.payload.config.matrix,
                     cols: nextNumberOfCols,
+                },
+                button: {
+                    ...this.payload.config.button,
+                    button_type: 'link',
                 }
             }
         }
