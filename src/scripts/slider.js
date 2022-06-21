@@ -50,7 +50,7 @@ class Slider {
             this.productWidth = this.lists[0].firstElementChild.offsetWidth
         }
 
-        this.productsPerSingleView = (this.track.offsetWidth - ((this.dataset.configMatrixCols-1) * parseInt(this.dataset.configFrameMarginBetween)))/this.productWidth;
+        this.productsPerSingleView = Math.floor((this.track.offsetWidth - ((this.dataset.configMatrixCols-1) * parseInt(this.dataset.configFrameMarginBetween)))/this.productWidth);
 
         if (this.frame.querySelector('.flowbox__arrows')) {
             const next = this.frame.querySelector('.flowbox__arrow--next')
