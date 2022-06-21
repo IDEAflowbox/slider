@@ -9,6 +9,18 @@
     }
   }
 
+  &.flowbox--scale-up-on-hover {
+    .flowbox__product:hover {
+      transform: scale(1.01);
+    }
+  }
+
+  &.flowbox--shadow-on-hover {
+    .flowbox__product:hover {
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
+
   .flowbox__arrows {
     position: absolute;
     top: 50%;
@@ -50,6 +62,7 @@
         list-style-type: none !important;
         margin: 0;
         position: relative;
+        transition: all ease 300ms;
 
         .flowbox__product-image-wrapper {
           display: flex;
