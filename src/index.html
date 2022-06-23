@@ -22,15 +22,15 @@
       <button class="flowbox__arrow flowbox__arrow--prev">
         <svg width="<%= config.arrow.size %>" height="<%= config.arrow.size %>" viewBox="0 0 40 40" fill="none"
              xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg)">
-          <% if (config.arrow.shape === 'shape_1') { %>
+          <% if (config.arrow.style === 'shape_1') { %>
             <rect width="40px" height="40px" fill="white"/>
             <path d="M15.8335 11.667L24.1668 20.0003L15.8335 28.3337" stroke="<%= config.arrow.color %>"
                   stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-          <% } else if (config.arrow.shape === 'shape_2') { %>
+          <% } else if (config.arrow.style === 'shape_2') { %>
             <path d="M11.6665 20H28.3332" stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10"/>
             <path d="M22.5 14.167L28.3333 20.0003L22.5 25.8337" stroke="<%= config.arrow.color %>" stroke-width="2"
                   stroke-miterlimit="10" stroke-linecap="square"/>
-          <% } else if (config.arrow.shape === 'shape_3') { %>
+          <% } else if (config.arrow.style === 'shape_3') { %>
             <g clip-path="url(#clip0_233_41149)">
               <path d="M15 20H24.1667" stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10"/>
               <path d="M20.8335 16.666L24.1668 19.9993L20.8335 23.3327" stroke="<%= config.arrow.color %>"
@@ -43,7 +43,7 @@
                 <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
               </clipPath>
             </defs>
-          <% } else if (config.arrow.shape === 'shape_4') { %>
+          <% } else if (config.arrow.style === 'shape_4') { %>
             <g clip-path="url(#clip0_233_41150)">
               <path d="M20.0002 29.1663C25.0628 29.1663 29.1668 25.0623 29.1668 19.9997C29.1668 14.9371 25.0628 10.833 20.0002 10.833C14.9376 10.833 10.8335 14.9371 10.8335 19.9997C10.8335 25.0623 14.9376 29.1663 20.0002 29.1663Z"
                     stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
@@ -55,7 +55,7 @@
                 <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
               </clipPath>
             </defs>
-          <% } else if (config.arrow.shape === 'shape_5') { %>
+          <% } else if (config.arrow.style === 'shape_5') { %>
             <path d="M15.8335 27.5V12.5L25.8335 20L15.8335 27.5Z" stroke="<%= config.arrow.color %>" stroke-width="2"
                   stroke-miterlimit="10" stroke-linecap="square"/>
           <% } %>
@@ -65,15 +65,15 @@
       <button class="flowbox__arrow flowbox__arrow--next">
         <svg width="<%= config.arrow.size %>" height="<%= config.arrow.size %>" viewBox="0 0 40 40" fill="none"
              xmlns="http://www.w3.org/2000/svg">
-          <% if (config.arrow.shape === 'shape_1') { %>
+          <% if (config.arrow.style === 'shape_1') { %>
             <rect width="40px" height="40px" fill="white"/>
             <path d="M15.8335 11.667L24.1668 20.0003L15.8335 28.3337" stroke="<%= config.arrow.color %>"
                   stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
-          <% } else if (config.arrow.shape === 'shape_2') { %>
+          <% } else if (config.arrow.style === 'shape_2') { %>
             <path d="M11.6665 20H28.3332" stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10"/>
             <path d="M22.5 14.167L28.3333 20.0003L22.5 25.8337" stroke="<%= config.arrow.color %>" stroke-width="2"
                   stroke-miterlimit="10" stroke-linecap="square"/>
-          <% } else if (config.arrow.shape === 'shape_3') { %>
+          <% } else if (config.arrow.style === 'shape_3') { %>
             <g clip-path="url(#clip0_233_41149)">
               <path d="M15 20H24.1667" stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10"/>
               <path d="M20.8335 16.666L24.1668 19.9993L20.8335 23.3327" stroke="<%= config.arrow.color %>"
@@ -86,7 +86,7 @@
                 <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
               </clipPath>
             </defs>
-          <% } else if (config.arrow.shape === 'shape_4') { %>
+          <% } else if (config.arrow.style === 'shape_4') { %>
             <g clip-path="url(#clip0_233_41150)">
               <path d="M20.0002 29.1663C25.0628 29.1663 29.1668 25.0623 29.1668 19.9997C29.1668 14.9371 25.0628 10.833 20.0002 10.833C14.9376 10.833 10.8335 14.9371 10.8335 19.9997C10.8335 25.0623 14.9376 29.1663 20.0002 29.1663Z"
                     stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
@@ -98,7 +98,7 @@
                 <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
               </clipPath>
             </defs>
-          <% } else if (config.arrow.shape === 'shape_5') { %>
+          <% } else if (config.arrow.style === 'shape_5') { %>
             <path d="M15.8335 27.5V12.5L25.8335 20L15.8335 27.5Z" stroke="<%= config.arrow.color %>" stroke-width="2"
                   stroke-miterlimit="10" stroke-linecap="square"/>
           <% } %>
@@ -299,210 +299,6 @@
                 "categories": null,
                 "created_at": "2022-04-27T21:50:14.168808Z",
                 "updated_at": "2022-06-20T23:19:07.664262Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2615",
-                "parent_id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2613",
-                "name": "Bluzka Basic V-line Beige",
-                "currency": "PLN",
-                "sku": "CS-BLU-082 SM",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/B\/1Bluzka-basic-v-line-beige_1_1.jpg",
-                "description": "<p style=\"color: rgb(51, 51, 51)\">Bluzka w jednolitym kolorze, z tr\u00f3jk\u0105tnym dekoltem.<\/p><p style=\"color: rgb(51, 51, 51)\">Uszyta z przewiewnej tkaniny, sprawdzi si\u0119 idealnie do wielu codziennych stylizacji.<\/p><p style=\"color: rgb(51, 51, 51)\">\u00a0Polska produkcja.<\/p><p style=\"color: rgb(51, 51, 51)\"><br><\/p><p style=\"color: rgb(51, 51, 51)\">Wymiary:<\/p><p style=\"color: rgb(51, 51, 51)\"><u>S\/M<\/u><\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 ca\u0142kowita : 62 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 w pasie: 52 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od ramienia: 59 cm\u00a0\u00a0<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od pachy: 48 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 r\u0119kawa: 11 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">G\u0142\u0119boko\u015b\u0107 dekoltu: 19 cm<\/p><p style=\"color: rgb(51, 51, 51)\"><br><\/p><p style=\"color: rgb(51, 51, 51)\"><u>M\/L<\/u><\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 ca\u0142kowita : 63 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 w pasie: 54 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od ramienia: 60 cm\u00a0\u00a0<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od pachy: 49 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 r\u0119kawa: 11 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">G\u0142\u0119boko\u015b\u0107 dekoltu: 19 cm<\/p><p style=\"color: rgb(51, 51, 51)\"><br><\/p><p style=\"color: rgb(51, 51, 51)\">Ubrania mierzone na p\u0142asko! Poszczeg\u00f3lne wymiary mog\u0105 r\u00f3\u017cni\u0107 si\u0119 +\/- 2 cm.<\/p><p><\/p><p><\/p><p style=\"color: rgb(51, 51, 51)\"><b style=\"font-weight: bold\">Sk\u0142ad: 95% bawe\u0142na, 5% elastan.<br><br><\/b>Czas realizacji mo\u017ce ulec wyd\u0142u\u017ceniu.<\/p>",
-                "net_price": 99,
-                "gross_price": 99,
-                "gross_sale_price": null,
-                "stock": 20,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/2613\/s\/bluzka-basic-v-line-beige\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:12.920221Z",
-                "updated_at": "2022-06-20T23:19:05.650119Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2594",
-                "parent_id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2591",
-                "name": "Spodnie Joggery Black",
-                "currency": "PLN",
-                "sku": "CS-KOM-025-SP S",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/S\/1Spodnie-joggery-black-1_2.jpg",
-                "description": "<p><span style=\"color: #333333;\">Wygoda czy wygoda? Ju\u017c wiemy, wygodnie i rewelacyjnie, poczujesz si\u0119 w naszych Spodniach Hoodie. No\u015b je osobno lub razem z\u00a0<a href=\"https:\/\/clothstore.pl\/search#?q=bluza\"><u>BLUZ\u0104<\/u>\u00a0<\/a>czy\u00a0<a href=\"https:\/\/clothstore.pl\/search#?q=marynarka&amp;s=default&amp;p=0\"><u>MARYNARK\u0104<\/u><\/a>. Mi\u0119sista bawe\u0142na, przyjemna nie tylko w ch\u0142odniejsze dni czy wieczory.<\/span><br \/><span style=\"color: #333333;\">\u00a0<\/span><br \/><br \/><\/p>\r\n<p><span style=\"color: #333333;\">\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 \u2665 Nasz autorski projekt by CLOTH<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Certyfikowana bawe\u0142na OEKO-TEX Standard 100<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Sk\u0142ad: 80% bawe\u0142na, 20% poliester<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Rewelacyjna, mi\u0119sista bawe\u0142na<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Wn\u0119trze delikatnie ocieplone<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Gramatura bawe\u0142ny: 270mg\/m2<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0<\/span><\/p>\r\n<p><strong><u><span style=\"color: #1f1311;\">Wymiary:<\/span><\/u><\/strong><\/p>\r\n<p>Rozmiar XS:<br \/>D\u0142ugo\u015b\u0107 ca\u0142kowita: 86 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 62 cm<br \/>Wysoko\u015b\u0107 pasa: 30 cm<br \/>Szeroko\u015b\u0107 w pasie: 28 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 43 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 11 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p>\r\n<p>Rozmiar S:<br \/>D\u0142ugo\u015b\u0107 ca\u0142kowita: 87 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 62 cm<br \/>Wysoko\u015b\u0107 pasa: 31 cm<br \/>Szeroko\u015b\u0107 w pasie: 30 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 46 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 12 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p>\r\n<p>Rozmiar M:<\/p>\r\n<p>D\u0142ugo\u015b\u0107 ca\u0142kowita: 91 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 66 cm<br \/>Wysoko\u015b\u0107 pasa: 30 cm<br \/>Szeroko\u015b\u0107 w pasie: 31 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 48 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 13 cm<\/p>\r\n<p>Rozmiar L:<\/p>\r\n<p>D\u0142ugo\u015b\u0107 ca\u0142kowita: 94 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 68 cm<br \/>Wysoko\u015b\u0107 pasa: 30 cm<br \/>Szeroko\u015b\u0107 w pasie: 34 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 51 cm<br \/>Szeroko\u015b\u0107 nogawki: 14 cm<\/p>\r\n<p>Rozmiar XL:<\/p>\r\n<p>D\u0142ugo\u015b\u0107 ca\u0142kowita: 95 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 69 cm<br \/>Wysoko\u015b\u0107 pasa: 31 cm<br \/>Szeroko\u015b\u0107 w pasie: 36 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 53 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 15 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Ubrania mierzone na p\u0142asko! Poszczeg\u00f3lne wymiary mog\u0105 r\u00f3\u017cni\u0107 si\u0119 +\/- 2 cm.<\/p>\r\n<p>\u00a0 \u00a0<\/p>\r\n<p><a href=\"https:\/\/clothstore.pl\/paypo\" target=\"_blank\" rel=\"noopener\"><img style=\"width: 373.5px;\" title=\"\" src=\"https:\/\/signature.idea07.pl\/cloth\/paypo_badge.png\" alt=\"PayPo\" \/><\/a><\/p>\r\n<p>\u00a0<\/p>",
-                "net_price": 119,
-                "gross_price": 119,
-                "gross_sale_price": null,
-                "stock": 5,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/2591\/s\/ocieplane-spodnie-hoodie-black\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:12.8685Z",
-                "updated_at": "2022-06-20T23:19:05.596014Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_1041",
-                "parent_id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_1014",
-                "name": "Bluzka Basic V-line White",
-                "currency": "PLN",
-                "sku": "CS-BLU-041 SM",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/B\/1Bluzka-basic-v-line-white_1_1.jpg",
-                "description": "<p>Bluzka w jednolitym kolorze, z tr\u00f3jk\u0105tnym dekoltem.<\/p><p>Uszyta z przewiewnej tkaniny, sprawdzi si\u0119 idealnie do wielu codziennych stylizacji.<\/p><p>Dost\u0119pna w 4 kolorach: czarnym, bia\u0142ym, szarym oraz khaki.<\/p><p><br><\/p><p>Polska produkcja.\u00a0<\/p><p><\/p><p>Sk\u0142ad: 95% bawe\u0142na, 5% elastan.<\/p><p>\u00a0<\/p>",
-                "net_price": 99,
-                "gross_price": 99,
-                "gross_sale_price": null,
-                "stock": 40,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/1014\/s\/bluzka-basic-v-line-white\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:12.073707Z",
-                "updated_at": "2022-06-20T23:19:01.944189Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_3439",
-                "parent_id": null,
-                "name": "Legginsy Navy",
-                "currency": "PLN",
-                "sku": "CS-LEG-005 UNI",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/L\/1Legginsy-navy-1.jpg",
-                "description": "<p>.<\/p>",
-                "net_price": 99,
-                "gross_price": 99,
-                "gross_sale_price": null,
-                "stock": 30,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/3439\/s\/legginsy-navy\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:14.168808Z",
-                "updated_at": "2022-06-20T23:19:07.664262Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2615",
-                "parent_id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2613",
-                "name": "Bluzka Basic V-line Beige",
-                "currency": "PLN",
-                "sku": "CS-BLU-082 SM",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/B\/1Bluzka-basic-v-line-beige_1_1.jpg",
-                "description": "<p style=\"color: rgb(51, 51, 51)\">Bluzka w jednolitym kolorze, z tr\u00f3jk\u0105tnym dekoltem.<\/p><p style=\"color: rgb(51, 51, 51)\">Uszyta z przewiewnej tkaniny, sprawdzi si\u0119 idealnie do wielu codziennych stylizacji.<\/p><p style=\"color: rgb(51, 51, 51)\">\u00a0Polska produkcja.<\/p><p style=\"color: rgb(51, 51, 51)\"><br><\/p><p style=\"color: rgb(51, 51, 51)\">Wymiary:<\/p><p style=\"color: rgb(51, 51, 51)\"><u>S\/M<\/u><\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 ca\u0142kowita : 62 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 w pasie: 52 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od ramienia: 59 cm\u00a0\u00a0<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od pachy: 48 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 r\u0119kawa: 11 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">G\u0142\u0119boko\u015b\u0107 dekoltu: 19 cm<\/p><p style=\"color: rgb(51, 51, 51)\"><br><\/p><p style=\"color: rgb(51, 51, 51)\"><u>M\/L<\/u><\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 ca\u0142kowita : 63 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 w pasie: 54 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od ramienia: 60 cm\u00a0\u00a0<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od pachy: 49 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 r\u0119kawa: 11 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">G\u0142\u0119boko\u015b\u0107 dekoltu: 19 cm<\/p><p style=\"color: rgb(51, 51, 51)\"><br><\/p><p style=\"color: rgb(51, 51, 51)\">Ubrania mierzone na p\u0142asko! Poszczeg\u00f3lne wymiary mog\u0105 r\u00f3\u017cni\u0107 si\u0119 +\/- 2 cm.<\/p><p><\/p><p><\/p><p style=\"color: rgb(51, 51, 51)\"><b style=\"font-weight: bold\">Sk\u0142ad: 95% bawe\u0142na, 5% elastan.<br><br><\/b>Czas realizacji mo\u017ce ulec wyd\u0142u\u017ceniu.<\/p>",
-                "net_price": 99,
-                "gross_price": 99,
-                "gross_sale_price": null,
-                "stock": 20,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/2613\/s\/bluzka-basic-v-line-beige\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:12.920221Z",
-                "updated_at": "2022-06-20T23:19:05.650119Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2594",
-                "parent_id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2591",
-                "name": "Spodnie Joggery Black",
-                "currency": "PLN",
-                "sku": "CS-KOM-025-SP S",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/S\/1Spodnie-joggery-black-1_2.jpg",
-                "description": "<p><span style=\"color: #333333;\">Wygoda czy wygoda? Ju\u017c wiemy, wygodnie i rewelacyjnie, poczujesz si\u0119 w naszych Spodniach Hoodie. No\u015b je osobno lub razem z\u00a0<a href=\"https:\/\/clothstore.pl\/search#?q=bluza\"><u>BLUZ\u0104<\/u>\u00a0<\/a>czy\u00a0<a href=\"https:\/\/clothstore.pl\/search#?q=marynarka&amp;s=default&amp;p=0\"><u>MARYNARK\u0104<\/u><\/a>. Mi\u0119sista bawe\u0142na, przyjemna nie tylko w ch\u0142odniejsze dni czy wieczory.<\/span><br \/><span style=\"color: #333333;\">\u00a0<\/span><br \/><br \/><\/p>\r\n<p><span style=\"color: #333333;\">\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 \u2665 Nasz autorski projekt by CLOTH<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Certyfikowana bawe\u0142na OEKO-TEX Standard 100<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Sk\u0142ad: 80% bawe\u0142na, 20% poliester<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Rewelacyjna, mi\u0119sista bawe\u0142na<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Wn\u0119trze delikatnie ocieplone<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Gramatura bawe\u0142ny: 270mg\/m2<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0<\/span><\/p>\r\n<p><strong><u><span style=\"color: #1f1311;\">Wymiary:<\/span><\/u><\/strong><\/p>\r\n<p>Rozmiar XS:<br \/>D\u0142ugo\u015b\u0107 ca\u0142kowita: 86 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 62 cm<br \/>Wysoko\u015b\u0107 pasa: 30 cm<br \/>Szeroko\u015b\u0107 w pasie: 28 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 43 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 11 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p>\r\n<p>Rozmiar S:<br \/>D\u0142ugo\u015b\u0107 ca\u0142kowita: 87 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 62 cm<br \/>Wysoko\u015b\u0107 pasa: 31 cm<br \/>Szeroko\u015b\u0107 w pasie: 30 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 46 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 12 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p>\r\n<p>Rozmiar M:<\/p>\r\n<p>D\u0142ugo\u015b\u0107 ca\u0142kowita: 91 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 66 cm<br \/>Wysoko\u015b\u0107 pasa: 30 cm<br \/>Szeroko\u015b\u0107 w pasie: 31 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 48 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 13 cm<\/p>\r\n<p>Rozmiar L:<\/p>\r\n<p>D\u0142ugo\u015b\u0107 ca\u0142kowita: 94 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 68 cm<br \/>Wysoko\u015b\u0107 pasa: 30 cm<br \/>Szeroko\u015b\u0107 w pasie: 34 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 51 cm<br \/>Szeroko\u015b\u0107 nogawki: 14 cm<\/p>\r\n<p>Rozmiar XL:<\/p>\r\n<p>D\u0142ugo\u015b\u0107 ca\u0142kowita: 95 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 69 cm<br \/>Wysoko\u015b\u0107 pasa: 31 cm<br \/>Szeroko\u015b\u0107 w pasie: 36 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 53 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 15 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Ubrania mierzone na p\u0142asko! Poszczeg\u00f3lne wymiary mog\u0105 r\u00f3\u017cni\u0107 si\u0119 +\/- 2 cm.<\/p>\r\n<p>\u00a0 \u00a0<\/p>\r\n<p><a href=\"https:\/\/clothstore.pl\/paypo\" target=\"_blank\" rel=\"noopener\"><img style=\"width: 373.5px;\" title=\"\" src=\"https:\/\/signature.idea07.pl\/cloth\/paypo_badge.png\" alt=\"PayPo\" \/><\/a><\/p>\r\n<p>\u00a0<\/p>",
-                "net_price": 119,
-                "gross_price": 119,
-                "gross_sale_price": null,
-                "stock": 5,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/2591\/s\/ocieplane-spodnie-hoodie-black\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:12.8685Z",
-                "updated_at": "2022-06-20T23:19:05.596014Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_1041",
-                "parent_id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_1014",
-                "name": "Bluzka Basic V-line White",
-                "currency": "PLN",
-                "sku": "CS-BLU-041 SM",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/B\/1Bluzka-basic-v-line-white_1_1.jpg",
-                "description": "<p>Bluzka w jednolitym kolorze, z tr\u00f3jk\u0105tnym dekoltem.<\/p><p>Uszyta z przewiewnej tkaniny, sprawdzi si\u0119 idealnie do wielu codziennych stylizacji.<\/p><p>Dost\u0119pna w 4 kolorach: czarnym, bia\u0142ym, szarym oraz khaki.<\/p><p><br><\/p><p>Polska produkcja.\u00a0<\/p><p><\/p><p>Sk\u0142ad: 95% bawe\u0142na, 5% elastan.<\/p><p>\u00a0<\/p>",
-                "net_price": 99,
-                "gross_price": 99,
-                "gross_sale_price": null,
-                "stock": 40,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/1014\/s\/bluzka-basic-v-line-white\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:12.073707Z",
-                "updated_at": "2022-06-20T23:19:01.944189Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_3439",
-                "parent_id": null,
-                "name": "Legginsy Navy",
-                "currency": "PLN",
-                "sku": "CS-LEG-005 UNI",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/L\/1Legginsy-navy-1.jpg",
-                "description": "<p>.<\/p>",
-                "net_price": 99,
-                "gross_price": 99,
-                "gross_sale_price": null,
-                "stock": 30,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/3439\/s\/legginsy-navy\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:14.168808Z",
-                "updated_at": "2022-06-20T23:19:07.664262Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2615",
-                "parent_id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2613",
-                "name": "Bluzka Basic V-line Beige",
-                "currency": "PLN",
-                "sku": "CS-BLU-082 SM",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/B\/1Bluzka-basic-v-line-beige_1_1.jpg",
-                "description": "<p style=\"color: rgb(51, 51, 51)\">Bluzka w jednolitym kolorze, z tr\u00f3jk\u0105tnym dekoltem.<\/p><p style=\"color: rgb(51, 51, 51)\">Uszyta z przewiewnej tkaniny, sprawdzi si\u0119 idealnie do wielu codziennych stylizacji.<\/p><p style=\"color: rgb(51, 51, 51)\">\u00a0Polska produkcja.<\/p><p style=\"color: rgb(51, 51, 51)\"><br><\/p><p style=\"color: rgb(51, 51, 51)\">Wymiary:<\/p><p style=\"color: rgb(51, 51, 51)\"><u>S\/M<\/u><\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 ca\u0142kowita : 62 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 w pasie: 52 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od ramienia: 59 cm\u00a0\u00a0<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od pachy: 48 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 r\u0119kawa: 11 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">G\u0142\u0119boko\u015b\u0107 dekoltu: 19 cm<\/p><p style=\"color: rgb(51, 51, 51)\"><br><\/p><p style=\"color: rgb(51, 51, 51)\"><u>M\/L<\/u><\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 ca\u0142kowita : 63 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 w pasie: 54 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od ramienia: 60 cm\u00a0\u00a0<\/p><p style=\"color: rgb(51, 51, 51)\">D\u0142ugo\u015b\u0107 r\u0119kawa od pachy: 49 cm<\/p><p style=\"color: rgb(51, 51, 51)\">Szeroko\u015b\u0107 r\u0119kawa: 11 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p><p style=\"color: rgb(51, 51, 51)\">G\u0142\u0119boko\u015b\u0107 dekoltu: 19 cm<\/p><p style=\"color: rgb(51, 51, 51)\"><br><\/p><p style=\"color: rgb(51, 51, 51)\">Ubrania mierzone na p\u0142asko! Poszczeg\u00f3lne wymiary mog\u0105 r\u00f3\u017cni\u0107 si\u0119 +\/- 2 cm.<\/p><p><\/p><p><\/p><p style=\"color: rgb(51, 51, 51)\"><b style=\"font-weight: bold\">Sk\u0142ad: 95% bawe\u0142na, 5% elastan.<br><br><\/b>Czas realizacji mo\u017ce ulec wyd\u0142u\u017ceniu.<\/p>",
-                "net_price": 99,
-                "gross_price": 99,
-                "gross_sale_price": null,
-                "stock": 20,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/2613\/s\/bluzka-basic-v-line-beige\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:12.920221Z",
-                "updated_at": "2022-06-20T23:19:05.650119Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2594",
-                "parent_id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_2591",
-                "name": "Spodnie Joggery Black",
-                "currency": "PLN",
-                "sku": "CS-KOM-025-SP S",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/S\/1Spodnie-joggery-black-1_2.jpg",
-                "description": "<p><span style=\"color: #333333;\">Wygoda czy wygoda? Ju\u017c wiemy, wygodnie i rewelacyjnie, poczujesz si\u0119 w naszych Spodniach Hoodie. No\u015b je osobno lub razem z\u00a0<a href=\"https:\/\/clothstore.pl\/search#?q=bluza\"><u>BLUZ\u0104<\/u>\u00a0<\/a>czy\u00a0<a href=\"https:\/\/clothstore.pl\/search#?q=marynarka&amp;s=default&amp;p=0\"><u>MARYNARK\u0104<\/u><\/a>. Mi\u0119sista bawe\u0142na, przyjemna nie tylko w ch\u0142odniejsze dni czy wieczory.<\/span><br \/><span style=\"color: #333333;\">\u00a0<\/span><br \/><br \/><\/p>\r\n<p><span style=\"color: #333333;\">\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0 \u2665 Nasz autorski projekt by CLOTH<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Certyfikowana bawe\u0142na OEKO-TEX Standard 100<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Sk\u0142ad: 80% bawe\u0142na, 20% poliester<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Rewelacyjna, mi\u0119sista bawe\u0142na<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Wn\u0119trze delikatnie ocieplone<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u2022 Gramatura bawe\u0142ny: 270mg\/m2<\/span><\/p>\r\n<p><span style=\"color: #1f1311;\">\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0<\/span><\/p>\r\n<p><strong><u><span style=\"color: #1f1311;\">Wymiary:<\/span><\/u><\/strong><\/p>\r\n<p>Rozmiar XS:<br \/>D\u0142ugo\u015b\u0107 ca\u0142kowita: 86 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 62 cm<br \/>Wysoko\u015b\u0107 pasa: 30 cm<br \/>Szeroko\u015b\u0107 w pasie: 28 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 43 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 11 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p>\r\n<p>Rozmiar S:<br \/>D\u0142ugo\u015b\u0107 ca\u0142kowita: 87 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 62 cm<br \/>Wysoko\u015b\u0107 pasa: 31 cm<br \/>Szeroko\u015b\u0107 w pasie: 30 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 46 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 12 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<\/p>\r\n<p>Rozmiar M:<\/p>\r\n<p>D\u0142ugo\u015b\u0107 ca\u0142kowita: 91 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 66 cm<br \/>Wysoko\u015b\u0107 pasa: 30 cm<br \/>Szeroko\u015b\u0107 w pasie: 31 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 48 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 13 cm<\/p>\r\n<p>Rozmiar L:<\/p>\r\n<p>D\u0142ugo\u015b\u0107 ca\u0142kowita: 94 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 68 cm<br \/>Wysoko\u015b\u0107 pasa: 30 cm<br \/>Szeroko\u015b\u0107 w pasie: 34 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 51 cm<br \/>Szeroko\u015b\u0107 nogawki: 14 cm<\/p>\r\n<p>Rozmiar XL:<\/p>\r\n<p>D\u0142ugo\u015b\u0107 ca\u0142kowita: 95 cm<br \/>D\u0142ugo\u015b\u0107 nogawki: 69 cm<br \/>Wysoko\u015b\u0107 pasa: 31 cm<br \/>Szeroko\u015b\u0107 w pasie: 36 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 w biodrach: 53 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Szeroko\u015b\u0107 nogawki: 15 cm (obw\u00f3d = szeroko\u015b\u0107 x2)<br \/>Ubrania mierzone na p\u0142asko! Poszczeg\u00f3lne wymiary mog\u0105 r\u00f3\u017cni\u0107 si\u0119 +\/- 2 cm.<\/p>\r\n<p>\u00a0 \u00a0<\/p>\r\n<p><a href=\"https:\/\/clothstore.pl\/paypo\" target=\"_blank\" rel=\"noopener\"><img style=\"width: 373.5px;\" title=\"\" src=\"https:\/\/signature.idea07.pl\/cloth\/paypo_badge.png\" alt=\"PayPo\" \/><\/a><\/p>\r\n<p>\u00a0<\/p>",
-                "net_price": 119,
-                "gross_price": 119,
-                "gross_sale_price": null,
-                "stock": 5,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/2591\/s\/ocieplane-spodnie-hoodie-black\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:12.8685Z",
-                "updated_at": "2022-06-20T23:19:05.596014Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_1041",
-                "parent_id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_1014",
-                "name": "Bluzka Basic V-line White",
-                "currency": "PLN",
-                "sku": "CS-BLU-041 SM",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/B\/1Bluzka-basic-v-line-white_1_1.jpg",
-                "description": "<p>Bluzka w jednolitym kolorze, z tr\u00f3jk\u0105tnym dekoltem.<\/p><p>Uszyta z przewiewnej tkaniny, sprawdzi si\u0119 idealnie do wielu codziennych stylizacji.<\/p><p>Dost\u0119pna w 4 kolorach: czarnym, bia\u0142ym, szarym oraz khaki.<\/p><p><br><\/p><p>Polska produkcja.\u00a0<\/p><p><\/p><p>Sk\u0142ad: 95% bawe\u0142na, 5% elastan.<\/p><p>\u00a0<\/p>",
-                "net_price": 99,
-                "gross_price": 99,
-                "gross_sale_price": null,
-                "stock": 40,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/1014\/s\/bluzka-basic-v-line-white\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:12.073707Z",
-                "updated_at": "2022-06-20T23:19:01.944189Z"
-              },
-              {
-                "id": "3b18c3fb-4395-4025-86d0-36216f1a5ca7_3439",
-                "parent_id": null,
-                "name": "Legginsy Navy",
-                "currency": "PLN",
-                "sku": "CS-LEG-005 UNI",
-                "image": "https:\/\/clothstore.pl\/pub\/media\/catalog\/product\/1\/L\/1Legginsy-navy-1.jpg",
-                "description": "<p>.<\/p>",
-                "net_price": 99,
-                "gross_price": 99,
-                "gross_sale_price": null,
-                "stock": 30,
-                "url": "https:\/\/clothstore.pl\/catalog\/product\/view\/id\/3439\/s\/legginsy-navy\/",
-                "categories": null,
-                "created_at": "2022-04-27T21:50:14.168808Z",
-                "updated_at": "2022-06-20T23:19:07.664262Z"
               }
             ],
             "html": "<div class=\"qONjs\" style=\"max-width: 1200px; margin: 0 auto;\"> <p style=\"-webkit-text-size-adjust: 100%; --swiper-theme-color: #007aff; --swiper-navigation-size: 44px; font-style: normal; font-weight: 400; line-height: 1.42857143; color: #1f1311; box-sizing: border-box; margin-top: 0; margin-bottom: 1rem; font-size: 36px; font-family: 'TenorSans' !important; text-align: center;\"> REKOMENDOWANE DLA CIEBIE</p><div class=\"flowbox-recommendation-frame\"> <div class=\"grid-container grid-container--products-8\"> <% products.forEach(function(product){%> <div class=\"flowbox-item\"> <a href=\"<%=product.url %>\" class=\"product photo product-item-photo\"> <span class=\"flowbox--product-image-container\"> <span class=\"flowbox--product-image-wrapper\" style=\"background-image: url('<%=product.image %>');\"></span> </span> </a> <div class=\"product details product-item-details\"> <span class=\"product name flowbox--product-item-name\"> <a href=\"<%=product.url %>\"><%=product.name %></a> </span> <div class=\"product-more-container\"> <div class=\"flowbox--product-flowbox--price-container\"> <div class=\"price-box price-final_price\"> <% if(product.gross_sale_price){%> <span class=\"flowbox--old-price\"> <span class=\"flowbox--price-container price-final_price\"> <span class=\"price-wrapper\"> <span class=\"price\"><%=product.gross_price %>&nbsp;PLN</span> </span> </span> </span> <%}%> <span class=\"special-price\"> <span class=\"flowbox--price-container price-final_price\"> <span class=\"price-wrapper\"> <% if(product.gross_sale_price){%> <span class=\"price\"><%=product.gross_sale_price %>&nbsp;PLN</span> <%}%> <% if(!product.gross_sale_price){%> <span class=\"price\"><%=product.gross_price %>&nbsp;PLN</span> <%}%> </span> </span> </span> </div></div></div></div></div><%}); %> </div></div></div><style>.flowbox-recommendation-frame{overflow: hidden;}.flowbox-recommendation-frame .grid-container{display: flex; flex-wrap: wrap; width: 100%;}.flowbox-recommendation-frame .grid-container .flowbox-item{flex: 1 0 calc(50% - 20px); width: calc(50% - 20px); margin: 0 8px 20px 8px;}.flowbox-recommendation-frame .grid-container .flowbox-item .flowbox--product-image-container{width: 100%;}.flowbox-recommendation-frame .grid-container .flowbox-item .flowbox--product-image-wrapper{width: 100%; padding-bottom: 150%; height: 0; display: block; background-repeat: no-repeat; background-size: cover;}@media only screen and (min-width: 769px){.flowbox-recommendation-frame .grid-container .flowbox-item{flex: 1 0 calc(33.33% - 30px); width: calc(33.33% - 30px); margin: 0 10px 30px 10px;}.flowbox-recommendation-frame .grid-container .flowbox-item:nth-child(4){display: none;}}@media only screen and (min-width: 900px){.flowbox-recommendation-frame .grid-container .flowbox-item{flex: 1 0 calc(25% - 30px); width: calc(25% - 30px); margin: 0 10px 30px 10px;}.flowbox-recommendation-frame .grid-container .flowbox-item:nth-child(4){display: block;}}.flowbox-recommendation-frame .grid-container .flowbox-item img{max-width: 100%; object-fit: contain;}.flowbox-recommendation-frame .grid-container .flowbox-item .flowbox--product-item-name{color: #1F1311; text-transform: uppercase; font-weight: 600; font-size: 16px; width: 100%; display: inline-block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}.flowbox-recommendation-frame .grid-container .flowbox-item .flowbox--product-item-name a{color: inherit; text-decoration: none;}.flowbox-recommendation-frame .grid-container .flowbox-item .flowbox--product-flowbox--price-container{text-align: right; font-size: 14px; font-weight: 400;}.flowbox-recommendation-frame .grid-container .flowbox-item .flowbox--product-flowbox--price-container .flowbox--old-price{text-decoration: line-through; text-decoration-color: #e5a5a2;}.flowbox-recommendation-frame .grid-container .flowbox-item .flowbox--product-flowbox--price-container .flowbox--price-container{display: block;}</style>",
@@ -516,7 +312,7 @@
             ],
             "config": {
               "matrix": {
-                "cols": 4,
+                "cols": 6,
                 "rows": 1
               },
               "enabled_elements": {
@@ -544,7 +340,7 @@
               "arrow": {
                 "size": "40px",
                 "color": "#000",
-                "shape": "shape_2"
+                "style": "shape_2"
               },
               "button": {
                 "width": "auto",
