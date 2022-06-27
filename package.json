@@ -1,6 +1,6 @@
 {
   "name": "@ideaflowbox/slider",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A javascript library that renders a simple recommendation frame",
   "scripts": {
     "build": "webpack --mode production",
