@@ -21,6 +21,10 @@
     }
   }
 
+  &.flowbox--hide-arrows .flowbox__arrows {
+    display: none;
+  }
+
   .flowbox__arrows {
     position: absolute;
     top: 50%;
