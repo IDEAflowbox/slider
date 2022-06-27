@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -20,6 +21,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
+    }),
+    new webpack.ProvidePlugin({
+      _: "underscore"
     }),
     new CleanWebpackPlugin()
   ],
@@ -48,6 +52,13 @@ module.exports = {
             minimize: true 
           }
         }]
+      },
+      {
+        test: /\.ejs$/,
+        loader: 'ejs-loader',
+        options: {
+          esModule: false
+        }
       },
       {
         test: /\.(png|jpe?g|svg|gif|ico)$/,

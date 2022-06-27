@@ -1,5 +1,5 @@
-const ejs = require('ejs/ejs.min')
 const BaseRenderer = require('./base_renderer');
+const template = require('../templates/frame.ejs');
 
 class Renderer extends BaseRenderer {
     products = [];
@@ -87,10 +87,7 @@ class Renderer extends BaseRenderer {
     }
 
     compile() {
-        const template = document.getElementById('flowbox_template').innerHTML;
-        const render = ejs.compile(template);
-
-        return render({
+        return template({
             config: this.config,
             products: this.products,
             fid: this.fid,

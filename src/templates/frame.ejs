@@ -1,0 +1,141 @@
+<div class="flowbox flowbox--ltr <% if (config.animations.overlay) { %>flowbox--overlay-on-hover<% } %> <% if (config.animations.scale_up) { %>flowbox--scale-up-on-hover<% } %> <% if (config.animations.shadow) { %>flowbox--shadow-on-hover<% } %>"
+     data-frame-id="<%= fid %>"
+     data-config-matrix-cols="<%= config.matrix.cols %>"
+     data-config-matrix-rows="<%= config.matrix.rows %>"
+     data-config-frame-side-padding="<%= config.frame.side_padding %>"
+     data-config-frame-margin-bottom="<%= config.frame.margin_bottom %>"
+     data-config-frame-margin-between="<%= config.frame.margin_between %>"
+>
+    <div class="flowbox__arrows flowbox_arrows--default">
+        <button class="flowbox__arrow flowbox__arrow--prev">
+            <svg width="<%= config.arrow.size %>" height="<%= config.arrow.size %>" viewBox="0 0 40 40" fill="none"
+                 xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg)">
+                <% if (config.arrow.style === 'shape_1') { %>
+                    <rect width="40px" height="40px" fill="white"/>
+                    <path d="M15.8335 11.667L24.1668 20.0003L15.8335 28.3337" stroke="<%= config.arrow.color %>"
+                          stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                <% } else if (config.arrow.style === 'shape_2') { %>
+                    <path d="M11.6665 20H28.3332" stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10"/>
+                    <path d="M22.5 14.167L28.3333 20.0003L22.5 25.8337" stroke="<%= config.arrow.color %>" stroke-width="2"
+                          stroke-miterlimit="10" stroke-linecap="square"/>
+                <% } else if (config.arrow.style === 'shape_3') { %>
+                    <g clip-path="url(#clip0_233_41149)">
+                        <path d="M15 20H24.1667" stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M20.8335 16.666L24.1668 19.9993L20.8335 23.3327" stroke="<%= config.arrow.color %>"
+                              stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                        <path d="M20.0002 29.1663C25.0628 29.1663 29.1668 25.0623 29.1668 19.9997C29.1668 14.9371 25.0628 10.833 20.0002 10.833C14.9376 10.833 10.8335 14.9371 10.8335 19.9997C10.8335 25.0623 14.9376 29.1663 20.0002 29.1663Z"
+                              stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_233_41149">
+                            <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
+                        </clipPath>
+                    </defs>
+                <% } else if (config.arrow.style === 'shape_4') { %>
+                    <g clip-path="url(#clip0_233_41150)">
+                        <path d="M20.0002 29.1663C25.0628 29.1663 29.1668 25.0623 29.1668 19.9997C29.1668 14.9371 25.0628 10.833 20.0002 10.833C14.9376 10.833 10.8335 14.9371 10.8335 19.9997C10.8335 25.0623 14.9376 29.1663 20.0002 29.1663Z"
+                              stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                        <path d="M18.3335 16.666L21.6668 19.9993L18.3335 23.3327" stroke="<%= config.arrow.color %>"
+                              stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_233_41150">
+                            <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
+                        </clipPath>
+                    </defs>
+                <% } else if (config.arrow.style === 'shape_5') { %>
+                    <path d="M15.8335 27.5V12.5L25.8335 20L15.8335 27.5Z" stroke="<%= config.arrow.color %>" stroke-width="2"
+                          stroke-miterlimit="10" stroke-linecap="square"/>
+                <% } %>
+            </svg>
+        </button>
+
+        <button class="flowbox__arrow flowbox__arrow--next">
+            <svg width="<%= config.arrow.size %>" height="<%= config.arrow.size %>" viewBox="0 0 40 40" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <% if (config.arrow.style === 'shape_1') { %>
+                    <rect width="40px" height="40px" fill="white"/>
+                    <path d="M15.8335 11.667L24.1668 20.0003L15.8335 28.3337" stroke="<%= config.arrow.color %>"
+                          stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                <% } else if (config.arrow.style === 'shape_2') { %>
+                    <path d="M11.6665 20H28.3332" stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10"/>
+                    <path d="M22.5 14.167L28.3333 20.0003L22.5 25.8337" stroke="<%= config.arrow.color %>" stroke-width="2"
+                          stroke-miterlimit="10" stroke-linecap="square"/>
+                <% } else if (config.arrow.style === 'shape_3') { %>
+                    <g clip-path="url(#clip0_233_41149)">
+                        <path d="M15 20H24.1667" stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10"/>
+                        <path d="M20.8335 16.666L24.1668 19.9993L20.8335 23.3327" stroke="<%= config.arrow.color %>"
+                              stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                        <path d="M20.0002 29.1663C25.0628 29.1663 29.1668 25.0623 29.1668 19.9997C29.1668 14.9371 25.0628 10.833 20.0002 10.833C14.9376 10.833 10.8335 14.9371 10.8335 19.9997C10.8335 25.0623 14.9376 29.1663 20.0002 29.1663Z"
+                              stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_233_41149">
+                            <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
+                        </clipPath>
+                    </defs>
+                <% } else if (config.arrow.style === 'shape_4') { %>
+                    <g clip-path="url(#clip0_233_41150)">
+                        <path d="M20.0002 29.1663C25.0628 29.1663 29.1668 25.0623 29.1668 19.9997C29.1668 14.9371 25.0628 10.833 20.0002 10.833C14.9376 10.833 10.8335 14.9371 10.8335 19.9997C10.8335 25.0623 14.9376 29.1663 20.0002 29.1663Z"
+                              stroke="<%= config.arrow.color %>" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                        <path d="M18.3335 16.666L21.6668 19.9993L18.3335 23.3327" stroke="<%= config.arrow.color %>"
+                              stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_233_41150">
+                            <rect width="20" height="20" fill="white" transform="translate(10 10)"/>
+                        </clipPath>
+                    </defs>
+                <% } else if (config.arrow.style === 'shape_5') { %>
+                    <path d="M15.8335 27.5V12.5L25.8335 20L15.8335 27.5Z" stroke="<%= config.arrow.color %>" stroke-width="2"
+                          stroke-miterlimit="10" stroke-linecap="square"/>
+                <% } %>
+            </svg>
+        </button>
+    </div>
+
+    <div class="flowbox__track flowbox__track--ltr"
+         style="margin-left: <%= config.frame.side_padding %>; margin-right: <%= config.frame.side_padding %>">
+        <% for(var row = 0; row < products.length; row++) { %>
+            <ul class="flowbox__list">
+                <% for(var col = 0; col < products[row].length; col++) { %>
+                    <li class="flowbox__product"
+                        style="width: calc(((100% + <%= config.frame.margin_between %>) / <%= config.matrix.cols %>) - <%= config.frame.margin_between %>); margin-right: <%= config.frame.margin_between %>; margin-bottom: <%= config.frame.margin_bottom %>; padding-left: <%= config.product.side_padding %>; padding-right: <%= config.product.side_padding %>; padding-top: <%= config.product.padding_top %>; padding-bottom: <%= config.product.padding_bottom %>; border-radius: <%= config.product.border_radius %>; background-color: <%= config.product.background_color %>;">
+                        <% if (config.enabled_elements.image) { %>
+                            <a href="<%= products[row][col].url %>" class="flowbox__product-link flowbox__product-image-wrapper">
+                  <span class="flowbox__product-image-container"
+                        style="background-image: url('<%= products[row][col].image %>'); width: <%= config.image.width %>; padding-bottom: <%= config.image.height %>;"></span>
+                            </a>
+                        <% } %>
+
+                        <div class="flowbox__product-details">
+                            <% if (config.enabled_elements.product_name) { %>
+                                <span class="flowbox__product-title">
+                                      <a href="<%= products[row][col].url %>"><%= products[row][col].name %></a>
+                                  </span>
+                            <% } %>
+
+                            <% if (config.enabled_elements.price) { %>
+                                <div class="flowbox__product-prices-container flowbox__product-prices-container--rtl">
+                                    <% if (products[row][col].gross_sale_price) { %>
+                                        <span class="flowbox__product-price flowbox__product-price--old"><%= products[row][col].gross_price %> PLN</span>
+                                        <span class="flowbox__product-price"><%= products[row][col].gross_sale_price %> PLN</span>
+                                    <% } else { %>
+                                        <span class="flowbox__product-price"><%= products[row][col].gross_price %> PLN</span>
+                                    <% } %>
+                                </div>
+                            <% } %>
+
+                            <% if (config.enabled_elements.button) { %>
+                                <div class="flowbox__product-button-container" style="text-align: <%= config.button.position %>;">
+                                    <a href="#" class="flowbox__product-button" data-type="<%= config.button.button_type %>"
+                                       style="width: <%= config.button.width %>; height: <%= config.button.height %>; background-color: <%= config.button.background_color %>; border-color: <%= config.button.border_color %>; border-radius: <%= config.button.border_radius %>; color: <%= config.button.text_color %>; font-size: <%= config.button.text_size %>; padding-left: <%= config.button.side_padding %>; padding-right: <%= config.button.side_padding %>;"><%= config.button.text %></a>
+                                </div>
+                            <% } %>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
+        <% } %>
+    </div>
+</div>

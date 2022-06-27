@@ -1,4 +1,5 @@
 const BaseRenderer = require('./base_renderer');
+const ejs = require('ejs/ejs.min')
 
 class EjsRenderer extends BaseRenderer {
     constructor(frame, preventRendering = false) {
