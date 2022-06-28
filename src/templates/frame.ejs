@@ -1,6 +1,6 @@
 <div class="flowbox flowbox--ltr <% if (config.animations.overlay) { %>flowbox--overlay-on-hover<% } %> <% if (config.animations.scale_up) { %>flowbox--scale-up-on-hover<% } %> <% if (config.animations.shadow) { %>flowbox--shadow-on-hover<% } %>"
      data-frame-id="<%= fid %>"
-     data-config-matrix-cols="<%= config.matrix.cols %>"
+     data-config-matrix-cols="<%= config.matrix.columns %>"
      data-config-matrix-rows="<%= config.matrix.rows %>"
      data-config-frame-side-padding="<%= config.frame.side_padding %>"
      data-config-frame-margin-bottom="<%= config.frame.margin_bottom %>"
@@ -100,7 +100,7 @@
             <ul class="flowbox__list">
                 <% for(var col = 0; col < products[row].length; col++) { %>
                     <li class="flowbox__product"
-                        style="width: calc(((100% + <%= config.frame.margin_between %>) / <%= config.matrix.cols %>) - <%= config.frame.margin_between %>); margin-right: <%= config.frame.margin_between %>; margin-bottom: <%= config.frame.margin_bottom %>; padding-left: <%= config.product.side_padding %>; padding-right: <%= config.product.side_padding %>; padding-top: <%= config.product.padding_top %>; padding-bottom: <%= config.product.padding_bottom %>; border-radius: <%= config.product.border_radius %>; background-color: <%= config.product.background_color %>;">
+                        style="width: calc(((100% + <%= config.frame.margin_between %>) / <%= config.matrix.columns %>) - <%= config.frame.margin_between %>); margin-right: <%= config.frame.margin_between %>; margin-bottom: <%= config.frame.margin_bottom %>; padding-left: <%= config.product.side_padding %>; padding-right: <%= config.product.side_padding %>; padding-top: <%= config.product.padding_top %>; padding-bottom: <%= config.product.padding_bottom %>; border-radius: <%= config.product.border_radius %>; background-color: <%= config.product.background_color %>;">
                         <% if (config.enabled_elements.image) { %>
                             <a href="<%= products[row][col].url %>" class="flowbox__product-link flowbox__product-image-wrapper">
                   <span class="flowbox__product-image-container"

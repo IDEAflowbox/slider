@@ -18,7 +18,7 @@ class Renderer extends BaseRenderer {
 
         this.products = this.sliceIntoChunks(frame.products, Math.ceil(frame.products.length/frame.config.matrix.rows));
         this.config = frame.config;
-        this.defaultNumberOfColumns = this.config.matrix.cols;
+        this.defaultNumberOfColumns = this.config.matrix.columns;
 
         if (false === preventRendering) {
             const renderSetting = this.getRenderSettings();
@@ -68,7 +68,7 @@ class Renderer extends BaseRenderer {
                 ...this.config,
                 matrix: {
                     ...this.config.matrix,
-                    cols: nextNumberOfColumns,
+                    columns: nextNumberOfColumns,
                 },
             };
 
