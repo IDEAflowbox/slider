@@ -262,7 +262,12 @@
       }
     }
 
-    response.frames.data.forEach((frame) => Flowbox.init(frame))
+    response.frames.data.forEach((frame) => {
+      const f = Flowbox.init(frame)
+      f.on('viewport', (isInViewport) => {
+        console.log(isInViewport)
+      })
+    })
   }, 100)
 </script>
 </body>

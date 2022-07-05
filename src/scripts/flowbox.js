@@ -5,9 +5,11 @@ const Slider = require('./slider');
 class Flowbox {
     static init(frame) {
         if (frame.frame_type === 'advanced') {
-            new EjsRenderer(frame);
+            return new EjsRenderer(frame);
         } else {
-            new Renderer(frame).rendered((el) => new Slider(el))
+            const f = new Renderer(frame);
+            f.rendered((el) => new Slider(el))
+            return f;
         }
     }
 }

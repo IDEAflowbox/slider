@@ -17,7 +17,7 @@ class BaseRenderer {
     render(xpath, xpath_injection_position, html) {
         try {
             const el = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-            el.insertAdjacentHTML(xpath_injection_position || 'beforeend', html);
+            el.insertAdjacentHTML(xpath_injection_position || 'beforeend', html.replace(/\<([a-zA-Z]+)\s/, '<$1 data-frame-id="'+this.fid+'" '));
             this.triggerRenderedCallback();
         } catch (e) {
             console.log(e);
@@ -29,12 +29,30 @@ class BaseRenderer {
     }
 
     getElement() {
-        return undefined;
+        return document.querySelector(`*[data-frame-id="${this.fid}"]`);
     }
 
     triggerRenderedCallback() {
         if (typeof this.renderedCallback === 'function') {
             this.renderedCallback(this.getElement());
+        }
+    }
+
+    on(event, callback) {
+        let isInViewport = false;
+        let throttleId = undefined;
+
+        if (event === 'viewport') {
+            if (this.frame.frame_type === 'advanced') {
+                window.addEventListener('scroll', () => {
+                    clearTimeout(throttleId);
+                    throttleId = setTimeout(() => {
+                        const bounding = this.getElement().getBoundingClientRect();
+                        isInViewport = bounding.top >= 0 && bounding.left >= 0 && bounding.right <= window.innerWidth && bounding.bottom <= window.innerHeight;
+                        callback(isInViewport);
+                    }, 100)
+                })
+            }
         }
     }
 }

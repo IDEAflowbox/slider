@@ -93,10 +93,6 @@ class Renderer extends BaseRenderer {
             fid: this.fid,
         });
     }
-
-    getElement() {
-        return document.querySelector(`.flowbox[data-frame-id="${this.fid}"]`);
-    }
 }
 
 module.exports = Renderer
