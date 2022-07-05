@@ -264,8 +264,8 @@
 
     response.frames.data.forEach((frame) => {
       const f = Flowbox.init(frame)
-      f.on('viewport', (isInViewport) => {
-        console.log(isInViewport)
+      f.on('viewport', (isInViewport, id) => {
+        console.log(isInViewport, id)
       })
     })
   }, 100)

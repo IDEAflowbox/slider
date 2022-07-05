@@ -49,7 +49,7 @@ class BaseRenderer {
                     throttleId = setTimeout(() => {
                         const bounding = this.getElement().getBoundingClientRect();
                         isInViewport = bounding.top >= 0 && bounding.left >= 0 && bounding.right <= window.innerWidth && bounding.bottom <= window.innerHeight;
-                        callback(isInViewport);
+                        callback(isInViewport, this.frame.id);
                     }, 100)
                 })
             }
