@@ -5,7 +5,14 @@
      data-config-frame-side-padding="<%= config.frame.side_padding %>"
      data-config-frame-margin-bottom="<%= config.frame.margin_bottom %>"
      data-config-frame-margin-between="<%= config.frame.margin_between %>"
+     style="<%= config.frame.wrapper_styles %>"
 >
+    <% if (config.frame.title_text) { %>
+        <div class="flowbox__title-wrapper" style="<%= config.frame.title_wrapper_styles %>">
+            <h4 class="flowbox__title" style="<%= config.frame.title_styles %>"><%= config.frame.title_text %></h4>
+        </div>
+    <% }%>
+
     <div class="flowbox__arrows flowbox_arrows--default">
         <button class="flowbox__arrow flowbox__arrow--prev">
             <svg width="<%= config.arrow.size %>" height="<%= config.arrow.size %>" viewBox="0 0 40 40" fill="none"
@@ -103,16 +110,16 @@
                         style="width: calc(((100% + <%= config.frame.margin_between %>) / <%= config.matrix.columns %>) - <%= config.frame.margin_between %>); margin-right: <%= config.frame.margin_between %>; margin-bottom: <%= config.frame.margin_bottom %>; padding-left: <%= config.product.side_padding %>; padding-right: <%= config.product.side_padding %>; padding-top: <%= config.product.padding_top %>; padding-bottom: <%= config.product.padding_bottom %>; border-radius: <%= config.product.border_radius %>; background-color: <%= config.product.background_color %>;">
                         <% if (config.enabled_elements.image) { %>
                             <a href="<%= products[row][col].url %>" class="flowbox__product-link flowbox__product-image-wrapper">
-                  <span class="flowbox__product-image-container"
-                        style="background-image: url('<%= products[row][col].image %>'); width: <%= config.image.width %>; padding-bottom: <%= config.image.height %>;"></span>
+                      <span class="flowbox__product-image-container"
+                            style="background-image: url('<%= products[row][col].image %>'); width: <%= config.image.width %>; padding-bottom: <%= config.image.height %>;"></span>
                             </a>
                         <% } %>
 
                         <div class="flowbox__product-details">
                             <% if (config.enabled_elements.product_name) { %>
                                 <span class="flowbox__product-title">
-                                      <a href="<%= products[row][col].url %>"><%= products[row][col].name %></a>
-                                  </span>
+                                          <a href="<%= products[row][col].url %>"><%= products[row][col].name %></a>
+                                      </span>
                             <% } %>
 
                             <% if (config.enabled_elements.price) { %>
